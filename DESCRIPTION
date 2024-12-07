@@ -1,14 +1,11 @@
 Package: hsr716
-Title: Course Materials for 309.716.01
 Version: 0.1
-Authors@R: person("Matthew", "Lavallee", email = "mlavall3@jh.edu",role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-Depends: 
-    R (>= 2.10),
-    here
-License: MIT + file LICENSE
-VignetteBuilder: knitr
-Suggests: knitr, rmarkdown
+Date: 2024-12-07
+Title: Course Materials for Advanced Health Service Research Methods
+Authors@R: c(person("Matthew", "Lavallee", role = c("aut", "cre"), email = "mlavall3@jh.edu"))
+Author: Matthew Lavallee [aut, cre]
+Maintainer: Matthew Lavallee <mlavall3@jh.edu>
+Depends: R (>= 3.1.0), here
+Suggests: data.table, knitr, rmarkdown
+Description: A (one paragraph) description of what the package does 
+    and why it may be useful.
