@@ -7,7 +7,6 @@ Authors@R: c(person("Matthew", "Lavallee",
     email = "mlavall3@jh.edu"))
 Maintainer: Matthew Lavallee <mlavall3@jh.edu>
 Depends: 
-    R (>= 3.1.0),
     here
 Suggests: 
     knitr,
