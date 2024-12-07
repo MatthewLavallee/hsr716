@@ -10,7 +10,5 @@ Depends:
     R (>= 2.10),
     here
 License: MIT + file LICENSE
-Suggests: 
-    knitr,
-    rmarkdown
 VignetteBuilder: knitr
+Suggests: knitr, rmarkdown
