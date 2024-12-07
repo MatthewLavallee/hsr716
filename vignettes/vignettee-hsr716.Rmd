@@ -1,8 +1,8 @@
 ---
-title: "hsr716"
+title: "vignettee-hsr716"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{hsr716}
+  %\VignetteIndexEntry{vignettee-hsr716}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
