@@ -3,7 +3,7 @@ Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
 Author: Matthew Lavallee
-Maintainer: mlavall3@jh.edu
+Maintainer: H
 Description: Course materials for Advanced Health Service Research Methods.
 Depends: 
     R (>= 2.10),
