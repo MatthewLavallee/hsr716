@@ -1,0 +1,36 @@
+---
+title: "Homework Exercise #1"
+author: "Name"
+date: "`r Sys.Date()`"
+output: pdf_document
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyfoot{}
+  - \fancyhead[R]{309.716.01}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+## Instructions
+
+For this assignment, you will perform multiple regression analyses using the variable **total expenditures (totexp08)**, regressed on **age (as of the end of the year)**, **female**, **Census region**, **family income as a percent of the poverty line**, and **years of education** when first entered MEPS.
+
+Data Preparation:
+
+ + Sample: Include only adults aged 18 and older.
+ + Treat years of education as a continuous variable.
+
+**Important**: For this homework, we are not going to take survey structure into account. 
+
+Please ensure that your analyses and results are clearly presented, well-documented, and logically justified. If you have any questions or need clarification on any part of the assignment, feel free to reach out for assistance.
+
+## Q1: Descriptive Statistics
+
+```{r q1}
+```
+
+ a) How many observations do you have with non-missing values for total expenditures?
+ b) Identify which variable(s) have missing observations and specify how many observations are missing for each variable.
