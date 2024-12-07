@@ -1,41 +1,45 @@
-#' Create project directory + folder system.
+#' Create project directory and folder system.
+#'
 #' @description
-#' \code{create_project_folder()} creates a .Rproj object in a new folder given a specified directory. After, it creates a set of dropdown folders.
+#' \code{create_project_folder()} creates a .Rproj object in a new folder at the specified directory, 
+#' and then sets up a default directory structure.
 create_project_folder <- function(project_name, base_path = ".") {
   # Full path for the project
   project_path <- file.path(base_path, project_name)
-  folders = c("homeworks", "projects", "examples")
-
-  # Create the main project folder
+  folders <- c("homeworks", "projects", "examples")
+  
+  # Create the main project folder if it doesn't exist
   if (!dir.exists(project_path)) {
-    dir.create(project_path)
+    dir.create(project_path, showWarnings = FALSE)
     message("Project folder created: ", project_path)
   } else {
     message("Project folder already exists: ", project_path)
   }
-
-  # Create subfolders
-  for (folder in folders) {
-    subfolder_path <- file.path(project_path, folder)
-    if (!dir.exists(subfolder_path)) {
-      dir.create(subfolder_path)
-      message("Subfolder created: ", subfolder_path)
+  
+  # Create subfolders in a vectorized manner
+  subfolder_paths <- file.path(project_path, folders)
+  created <- lapply(subfolder_paths, function(path) {
+    if (!dir.exists(path)) {
+      dir.create(path, showWarnings = FALSE)
+      message("Subfolder created: ", path)
     } else {
-      message("Subfolder already exists: ", subfolder_path)
+      message("Subfolder already exists: ", path)
     }
-  }
-
+  })
+  
   # Return the project path
   return(project_path)
 }
 
 #' Get homeworks.
+#'
 #' @description
-#' \code{create_project_folder()} creates a .Rproj object in a new folder given a specified directory. After, it creates a set of dropdown folders.
+#' \code{grab_homeworks()} downloads a set of homework RMarkdown files from a specified URL.
 grab_homeworks <- function(variables) {
-  num_hws<-1:1
-  hw_urls<-paste0("https://raw.githubusercontent.com/MatthewLavallee/hsr716/refs/heads/main/trunk/homeworks/hw",num_hws,".Rmd")
-  for (i in 1:length(hw_urls)) {
-    download.file(hw_urls[i],here("homeworks",paste0("hw",i,".Rmd")))
-  }
+  hw_urls <- paste0("https://raw.githubusercontent.com/MatthewLavallee/hsr716/refs/heads/main/trunk/homeworks/hw", 1:1, ".Rmd")
+  
+  # Vectorized download using mapply
+  mapply(function(url, i) {
+    download.file(url, here("homeworks", paste0("hw", i, ".Rmd")))
+  }, hw_urls, seq_along(hw_urls))
 }
