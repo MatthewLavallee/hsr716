@@ -6,7 +6,7 @@ Authors@R: c(person("Matthew", "Lavallee",
     role = c("aut", "cre"), 
     email = "mlavall3@jh.edu"))
 Maintainer: Matthew Lavallee <mlavall3@jh.edu>
-Depends: 
+Depends:
     here
 Suggests: 
     knitr,
@@ -14,3 +14,5 @@ Suggests:
 VignetteBuilder: knitr
 Description: A (one paragraph) description of what the package does 
     and why it may be useful.
+RoxygenNote: 7.3.2
+License: MIT + file LICENSE
