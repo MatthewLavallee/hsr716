@@ -16,3 +16,4 @@ Description: A (one paragraph) description of what the package does
     and why it may be useful.
 RoxygenNote: 7.3.2
 License: MIT + file LICENSE
+Encoding: UTF-8
